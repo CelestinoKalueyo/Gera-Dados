@@ -1,14 +1,15 @@
-%Algoritmo para extraÁ„o de dados nos sinais de tens„o e corrente
-%Apos a extraÁ„o dos sinais, os mesmos sinais ser„o filtrados atravÈs do
+%Algoritmo para extra√ß√£o de dados nos sinais de tens√£o e corrente
+%Apos a extra√ß√£o dos sinais, os mesmos sinais ser√£o filtrados atrav√©s do
 %filtro passa baixa de Butterworth coom a finalidade de retirar as
 %impurezas dos sinais e dos dados
+
 function [sinalreamostrado, tres] = reamostrar(signal,t)
 
     fnyquist=(64*60)/2;
     fstop=1900;
     fpass=90;
 
-%ConstrÛi filtro passa-baixa de Butterworth
+%Constr√≥i filtro passa-baixa de Butterworth
     wp = fpass/fnyquist;
     ws = fstop/fnyquist; 
     [filter_order,wn] = buttord(wp,ws,3,40); 
