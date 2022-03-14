@@ -27,5 +27,4 @@ function [sinalreamostrado, tres] = reamostrar(signal,t)
     ts = transpose(ts);
     res_ts = resample(ts,tres);
     sinalreamostrado = res_ts.Data;
-    
 end
